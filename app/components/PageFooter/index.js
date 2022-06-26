@@ -14,10 +14,15 @@ import { StickyFooter } from './sticky';
 
 const Footer = StickyFooter.extend`
   textAlign: center;
-  background: #efeeee;
-  color: #5a5a5a;
+  background: #da292e;
+  color: #fff;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  padding: 6px 12px;
   padding: 10px;
   font-size: 14px;
+  border-radius: 8px;
 `;
 
 const Span = styled.span`
@@ -27,28 +32,7 @@ const Span = styled.span`
 
 function PageFooter() {
   return (
-    <Footer>
-      <Row>
-        <Col sm={12} xs={24}>
-          {'ETH Hot Wallet - '}
-          <a href={github} target="_blank" rel="noopener">
-            Ethereum Wallet with ERC20 support (GitHub)
-          </a><br />
-          Created using: eth-lightwallet, React.js, Ant design...
-        </Col>
-
-        <Span>
-          <Col sm={12} xs={24}>
-            <a href="https://medium.freecodecamp.org/how-to-build-an-ethereum-wallet-web-app-ac77dcaac573" target="_blank" rel="noopener">
-            How to build an Ethereum Wallet guide
-            </a>
-            <br />
-            ETH: 0x97325941fafde5a182e6f7e5475a592ac615a3f2
-          </Col>
-        </Span>
-
-      </Row>
-    </Footer>
+    <Footer><i className="fa fa-triangle-exclamation" />&nbsp; This application is for demo purposes only.</Footer>
   );
 }
 

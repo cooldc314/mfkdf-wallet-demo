@@ -38,10 +38,10 @@ function SubHeader(props) {
 
   const noWalletSubHeader = [
     <Button key="new_wallet" type="primary" size="large" onClick={onGenerateWallet}>
-      New wallet
+      <i className="fa fa-user-plus"></i>&nbsp; Sign Up
     </Button>,
     <Button key="restore_wallet" type="default" size="large" onClick={onShowRestoreWallet}>
-      Restore wallet
+      <i className="fa fa-right-to-bracket"></i>&nbsp; Log In
     </Button>,
     /* optional laod / save buttons
      <IconButton
