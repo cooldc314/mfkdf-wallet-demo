@@ -1,16 +1,16 @@
 {
-  "name": "eth-hot-wallet",
-  "version": "0.6.0",
-  "description": "Ethereum and ERC20 Hot Wallet",
+  "name": "ethereum-web-wallet",
+  "version": "0.0.1",
+  "description": "Decentralized ethereum web wallet with erc20 support, based on MFKDF",
   "repository": {
     "type": "git",
-    "url": "git://github.com/PaulLaux/eth-hot-wallet.git"
+    "url": "git://github.com/multifactor/mfkdf-wallet-demo.git"
   },
   "engines": {
     "npm": ">=3",
     "node": ">=7"
   },
-  "author": "Paul Laux",
+  "author": "Vivek Nair <vivek@nair.me> (https://nair.me)",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
