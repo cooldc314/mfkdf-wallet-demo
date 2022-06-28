@@ -1,7 +1,7 @@
 /**
  * Wallet operations
  */
-delete global._bitcore
+// delete global._bitcore
 import lightwallet from 'eth-lightwallet';
 import localStore from 'store/dist/store.modern';
 
