@@ -3,7 +3,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 // const WebpackMonitor = require('webpack-monitor');
 
 module.exports = require('./webpack.base.babel')({
@@ -19,7 +18,6 @@ module.exports = require('./webpack.base.babel')({
   },
 
   plugins: [
-    new UglifyJSPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
