@@ -92,7 +92,7 @@
       "browser": true,
       "node": true,
       "jest": true,
-      "es6": true
+      "es6": false
     },
     "plugins": [
       "redux-saga",
@@ -100,7 +100,7 @@
       "jsx-a11y"
     ],
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 5,
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
