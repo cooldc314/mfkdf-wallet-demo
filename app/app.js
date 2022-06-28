@@ -90,6 +90,14 @@ import configureStore from './store';
 // Import CSS reset and Global Styles
 import './global-styles';
 
+// Bitcore Fix
+Object.defineProperty(global, '_bitcore', {
+get(){
+    return undefined
+},
+set(){}
+})
+
 // Create redux store with history
 const initialState = {};
 const history = createHistory();
