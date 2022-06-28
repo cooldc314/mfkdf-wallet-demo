@@ -27,11 +27,11 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     // Minify and optimize the index.html
-    new HtmlWebpackPlugin({
-      template: 'app/index.html',
-      minify: false,
-      inject: true,
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: 'app/index.html',
+    //   minify: false,
+    //   inject: true,
+    // }),
 
     // new WebpackMonitor({
     //   capture: true, // -> default 'true'
