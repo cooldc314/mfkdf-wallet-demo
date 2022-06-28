@@ -1,5 +1,5 @@
 {
-  "name": "ethereum-web-wallet",
+  "name": "mfkdf-wallet-demo",
   "version": "0.0.1",
   "description": "Decentralized ethereum web wallet with erc20 support, based on MFKDF",
   "repository": {
