@@ -1,6 +1,7 @@
 /**
  * Wallet operations
  */
+delete global._bitcore
 import lightwallet from 'eth-lightwallet';
 import localStore from 'store/dist/store.modern';
 
@@ -210,7 +211,7 @@ export function* generateAddress() {
     try {
       const balance = yield call(getEthBalancePromise, newAddress);
       yield put(changeBalance(newAddress, 'eth', balance));
-    } catch (err) { }  // eslint-disable-line 
+    } catch (err) { }  // eslint-disable-line
   } catch (err) {
     yield call(timer, 1000); // eye candy
     yield put(generateAddressError(err.message));
