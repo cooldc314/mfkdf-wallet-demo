@@ -217,6 +217,7 @@
   },
   "dependencies": {
     "antd": "^3.26.9",
+    "axios": "^0.27.2",
     "babel-polyfill": "^6.26.0",
     "chalk": "^3.0.0",
     "compression": "^1.7.4",
@@ -224,6 +225,7 @@
     "eth-lightwallet": "^3.0.1",
     "express": "^4.17.1",
     "fontfaceobserver": "^2.1.0",
+    "form-data": "^4.0.0",
     "history": "^4.10.1",
     "hoist-non-react-statics": "^2.1.1",
     "immutable": "^3.8.2",

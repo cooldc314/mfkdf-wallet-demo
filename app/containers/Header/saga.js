@@ -191,7 +191,7 @@ export function* confirmSendTransaction() {
       throw new Error('Gas price must be at least 0.1 Gwei');
     }
 
-    const msg = `Transaction created successfully. 
+    const msg = `Transaction created successfully.
     Sending ${amount} from ...${fromAddress.slice(-5)} to ...${toAddress.slice(-5)}`;
     yield put(confirmSendTransactionSuccess(msg));
   } catch (err) {
@@ -382,15 +382,14 @@ function* watchPollData() {
  * Get exchange rates from api
  */
 export function* getRates() {
-  // const requestURL = 'https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR';
-  const requestURL = 'https://api.coinmarketcap.com/v1/ticker/?convert=EUR';
+  const requestURL = 'https://pro-api.coinmarketcap.com/v1/ticker/?convert=EUR&CMC_PRO_API_KEY=ccc7be0c-572f-4328-80e2-e147b21a8b57';
   try {
     let dummyRates = [{ // for testin in online = false mode
       id: 'ethereum',
       name: 'Ethereum',
       symbol: 'ETH',
       rank: '2',
-      price_usd: '295.412',
+      price_usd: '1107.98',
       price_btc: '0.0684231',
       '24h_volume_usd': '308964000.0',
       market_cap_usd: '28043053731.0',
@@ -410,7 +409,7 @@ export function* getRates() {
     }
 
     // Call our request helper (see 'utils/request')
-    const apiRates = online ? (yield call(request, requestURL)) : dummyRates;
+    const apiRates = online ? dummyRates : dummyRates;
 
     // console.log(apiPrices);
 

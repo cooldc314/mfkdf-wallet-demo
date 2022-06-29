@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js';
 BigNumber.config({ POW_PRECISION: 10 });
 
 /*
-const requestURL = 'https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR';
+const requestURL = 'https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR&CMC_PRO_API_KEY=ccc7be0c-572f-4328-80e2-e147b21a8b57';
 
 // Call our request helper (see 'utils/request')
 // const apiPrices = (yield call(request, requestURL))[0];
@@ -30,14 +30,14 @@ const Output = {
 */
 const ratesMaps =
   {
-    'https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR': {
+    'https://pro-api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR&CMC_PRO_API_KEY=ccc7be0c-572f-4328-80e2-e147b21a8b57': {
       eth_eth: { path: { const: 1 }, isInverse: false, name: 'ETH' },
       eth_usd: { path: { symbol: 'eth', key: 'price_usd' }, name: 'USD' },
       eth_btc: { path: { symbol: 'eth', key: 'price_btc' }, name: 'BTC' },
       eth_eur: { path: { symbol: 'eth', key: 'price_eur' }, name: 'EURO' },
     },
 
-    'https://api.coinmarketcap.com/v1/ticker/?convert=EUR': {
+    'https://pro-api.coinmarketcap.com/v1/ticker/?convert=EUR&CMC_PRO_API_KEY=ccc7be0c-572f-4328-80e2-e147b21a8b57': {
       eth_eth: { path: { const: 1 }, name: 'ETH' },
       eth_usd: { path: { symbol: 'eth', key: 'price_usd' }, name: 'USD' },
       eth_btc: { path: { symbol: 'eth', key: 'price_btc' }, name: 'BTC' },

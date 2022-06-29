@@ -40,6 +40,7 @@ function SubHeader(props) {
     <Button key="new_wallet" type="primary" size="large" onClick={onGenerateWallet}>
       <i className="fa fa-user-plus"></i>&nbsp; Sign Up
     </Button>,
+    // <Signup key="new_wallet" onGenerateWallet={onGenerateWallet} />,
     <Button key="restore_wallet" type="default" size="large" onClick={onShowRestoreWallet}>
       <i className="fa fa-right-to-bracket"></i>&nbsp; Log In
     </Button>,
