@@ -3,9 +3,10 @@
 MFKDF Wallet Demo
 
 [![GitHub issues](https://img.shields.io/github/issues/multifactor/mfkdf-wallet-demo)](https://github.com/multifactor/mfkdf-wallet-demo/issues)
-[![MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/multifactor/mfkdf-wallet-demo/blob/main/LICENSE)
+[![MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/multifactor/mfkdf-wallet-demo/blob/master/LICENSE)
 
 [View Demo](https://wallet.mfkdf.com) |
+[Demo Video](https://www.youtube.com/watch?v=cB44BMGnFIs) |
 [MFKDF Repo](https://github.com/multifactor/mfkdf) |
 [MFKDF Site](https://mfkdf.com/) |
 [MFKDF Docs](https://mfkdf.com/docs/) |
@@ -16,4 +17,4 @@ This repository illustrates how to use MFKDF to build a strong trustless decentr
 
 Based on the 2017 [eth-hot-wallet](https://github.com/PaulLaux/eth-hot-wallet) project by [Paul Laux](https://github.com/PaulLaux).
 
-Copyright ©2022 Vivek Nair, ©2017 Paul Laux • [MIT](https://github.com/multifactor/mfkdf-wallet-demo/blob/main/LICENSE)
+Copyright ©2022 Vivek Nair, ©2017 Paul Laux • [MIT](https://github.com/multifactor/mfkdf-wallet-demo/blob/master/LICENSE)
