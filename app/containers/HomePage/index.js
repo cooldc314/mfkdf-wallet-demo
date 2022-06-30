@@ -16,6 +16,8 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 
+import icon from './icon.png';
+
 /* Components:  */
 import AddressView from 'components/AddressView';
 import SendToken from 'containers/SendToken';
@@ -247,12 +249,19 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       <div>
         <Content>
           <Header />
-          <SubHeader {...subHeaderProps} />
-          <GenerateWalletModal {...generateWalletProps} />
-          <RestoreWalletModal {...restoreWalletModalProps} />
-          <AddressView {...addressViewProps} />
-          <SendToken {...sendTokenProps} />
-          <TokenChooser {...tokenChooserProps} />
+          <div className="form">
+            <img class="logo" src={icon} alt="MFKDF" />
+            <div className="card">
+              <div className="hmax">
+                <SubHeader {...subHeaderProps} />
+                <GenerateWalletModal {...generateWalletProps} />
+                <RestoreWalletModal {...restoreWalletModalProps} />
+                <AddressView {...addressViewProps} />
+                <SendToken {...sendTokenProps} />
+                <TokenChooser {...tokenChooserProps} />
+              </div>
+            </div>
+          </div>
         </Content>
         <PageFooter />
       </div>

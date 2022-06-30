@@ -22,7 +22,8 @@ export default class App extends React.PureComponent { // eslint-disable-line re
 
   render() {
     return (
-      <div>
+      <div className="splash-bg">
+        <div className="bg-image" />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route component={HomePage} />
