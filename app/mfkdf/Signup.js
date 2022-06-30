@@ -30,6 +30,9 @@ class Signup extends React.Component {
         argon2parallelism: 1
       });
 
+      await setup.addEnvelopedSecret('seed', Buffer.from(this.props.seed));
+      await setup.addEnvelopedSecret('password', Buffer.from(this.props.password));
+
       const data = JSON.stringify({
         "pinataOptions": { "cidVersion": 1 },
         "pinataMetadata": { "name": setup.policy.$id },
@@ -48,9 +51,6 @@ class Signup extends React.Component {
       };
 
       const res = await axios(config);
-
-      console.log(res.data);
-      console.log(setup);
 
       this.setState({
         loading: false,

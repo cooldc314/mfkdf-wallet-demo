@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import Login from '../../mfkdf/Login';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Modal, Button, Input, Icon, Tooltip } from 'antd';
@@ -37,39 +38,42 @@ function RestoreWalletModal(props) {
   return (
     <Modal
       visible={isShowRestoreWallet}
-      title="Restore Wallet"
+      title="Log In"
       onOk={onRestoreWalletCancel}
       onCancel={onRestoreWalletCancel}
-      footer={[
-        restoreWalletError ? errorComponent : null,
-        <Button key="submit" type="primary" size="large" onClick={onRestoreWalletFromSeed} >
-          Restore
-        </Button >,
-      ]}
+      footer={false}
     >
-      <Description> {"HDPathString m/44'/60'/0'/0 is used for address generation"}</Description>
-      <Input
-        placeholder="Enter seed"
-        prefix={<Icon type="wallet" />}
-        value={userSeed}
-        onChange={onChangeUserSeed}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck={false}
-      />
-      <Div>
+      <Login onChangeUserSeed={onChangeUserSeed} onChangeUserPassword={onChangeUserPassword} />
+      <div style={{display: 'none'}}>
+        <br />
         <Input
-          placeholder="Enter password for keystore encryption"
-          prefix={<Icon type="key" />}
-          value={userPassword}
-          onChange={onChangeUserPassword}
+          placeholder="Enter seed"
+          prefix={<Icon type="wallet" />}
+          value={userSeed}
+          onChange={onChangeUserSeed}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
           spellCheck={false}
+          id="enterseed"
         />
-      </Div>
+        <Div>
+          <Input
+            placeholder="Enter password for keystore encryption"
+            prefix={<Icon type="key" />}
+            value={userPassword}
+            onChange={onChangeUserPassword}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            id="enterpassword"
+          />
+        </Div>
+        <Button key="submit" type="primary" size="large" id="restorebtn" onClick={onRestoreWalletFromSeed} >
+          Restore
+        </Button >
+      </div>
     </Modal>
   );
 }
