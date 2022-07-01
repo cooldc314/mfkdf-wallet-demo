@@ -86,8 +86,9 @@ injectGlobal`
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: none;
     overflow: hidden;
+    min-height: 325px;
   }
 
   .hmax {
@@ -99,5 +100,58 @@ injectGlobal`
     height: 100px;
     margin-bottom: 2rem;
     margin-top: 0;
+  }
+
+  .video-abs {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .intro-abs {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 2rem !important;
+    text-align: left;
+  }
+
+  .intro-abs h3 {
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #212529;
+  }
+
+  .intro-abs p {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgb(73, 80, 87);
+  }
+
+  p.mt-0 {
+    margin-top: -1rem !important;
+  }
+
+  .embed-container {
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative !important;
+  }
+
+  .embed-container embed, .embed-container iframe, .embed-container object {
+    height: 100%;
+    left: 0;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
   }
 `;

@@ -23,7 +23,6 @@ font-weight: 400;
 function WelcomeText() {
   return (
     <div>
-      <H1>MFKDF Wallet Demo</H1>
     </div>
   );
 }

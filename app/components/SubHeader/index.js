@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { Button, Popconfirm } from 'antd';
+import { Button, Popconfirm, Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LockButton from 'components/LockButton';
@@ -36,24 +36,25 @@ function SubHeader(props) {
 
   const lockButtonProps = { onLockWallet, password, onUnlockWallet };
 
-  const noWalletSubHeader = [
-    <Button key="new_wallet" type="primary" size="large" onClick={onGenerateWallet}>
-      <i className="fa fa-user-plus"></i>&nbsp; Sign Up
-    </Button>,
-    // <Signup key="new_wallet" onGenerateWallet={onGenerateWallet} />,
-    <Button key="restore_wallet" type="default" size="large" onClick={onShowRestoreWallet}>
-      <i className="fa fa-right-to-bracket"></i>&nbsp; Log In
-    </Button>,
-    /* optional laod / save buttons
-     <IconButton
-      key="load"
-      text="Load from storage"
-      icon="upload"
-      onClick={onLoadWallet}
-      loading={loadWalletLoading}
-      error={loadWalletError}
-    />,*/
-  ];
+  const noWalletSubHeader = <React.Fragment>
+    <Row type="flex" justify="left">
+      <Col span={12} className="intro-abs">
+        <h3>MFKDF Wallet Demo</h3>
+        <p>A strong trustless decentralized cryptocurrency wallet application featuring multi-factor key derivation with self-service key recovery. It uses IPFS and IPNS to store MFKDF policy files.</p>
+        <p><a href="https://github.com/multifactor/mfkdf">GitHub repository for MFKDF <i className="fa-solid fa-arrow-up-right-from-square" /></a></p>
+        <p className="mt-0"><a href="https://github.com/multifactor/mfkdf-wallet-demo">GitHub repository for this demo <i className="fa-solid fa-arrow-up-right-from-square" /></a></p>
+        <Button key="new_wallet" type="primary" size="large" onClick={onGenerateWallet}>
+          <i className="fa fa-user-plus"></i>&nbsp; Sign Up
+        </Button>
+        <Button key="restore_wallet" type="default" size="large" onClick={onShowRestoreWallet}>
+          <i className="fa fa-right-to-bracket"></i>&nbsp; Log In
+        </Button>
+      </Col>
+      <Col span={12} className="video-abs">
+        <div class="embed-container"><iframe src="https://www.youtube.com/embed/cB44BMGnFIs" frameborder="0" title="embed" class="ui-droppable"></iframe></div>
+      </Col>
+    </Row>
+  </React.Fragment>;
 
   const existingWalletSubHeader = [
     <LockButton key="lock_button" {...lockButtonProps} />,
