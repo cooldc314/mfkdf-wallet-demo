@@ -154,7 +154,7 @@ export function* loadNetwork(action) {
       }
 
       const usedFaucet = yield select(makeSelectUsedFaucet());
-      if (action.networkName === 'Ropsten Testnet' && !usedFaucet) {
+      if (action.networkName === 'Goerli Testnet' && !usedFaucet) {
         yield put(checkFaucet());
       }
     } else {

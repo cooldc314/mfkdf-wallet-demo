@@ -1,5 +1,5 @@
-/* eslint-disable */ 
- /* eslint-disable */ 
+/* eslint-disable */
+ /* eslint-disable */
  (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -95,7 +95,7 @@ function SignerProvider(path, options) {
     throw new Error('[ethjs-provider-signer] the SignerProvider requires an options object be provided with the \'privateKey\' property specified, you provided type ' + typeof options + '.');
   }
   if (typeof options.signTransaction !== 'function') {
-    throw new Error('[ethjs-provider-signer] the SignerProvider requires an options object be provided with the \'signTransaction\' property specified, you provided type ' + typeof options.privateKey + ' (e.g. \'const eth = new Eth(new SignerProvider("http://ropsten.infura.io", { privateKey: (account, cb) => cb(null, \'some private key\') }));\').');
+    throw new Error('[ethjs-provider-signer] the SignerProvider requires an options object be provided with the \'signTransaction\' property specified, you provided type ' + typeof options.privateKey + ' (e.g. \'const eth = new Eth(new SignerProvider("http://goerli.infura.io", { privateKey: (account, cb) => cb(null, \'some private key\') }));\').');
   }
 
   var self = this;
@@ -211,7 +211,7 @@ function HttpProvider(host, timeout) {
     throw new Error('[ethjs-provider-http] the HttpProvider instance requires the "new" flag in order to function normally (e.g. `const eth = new Eth(new HttpProvider());`).');
   }
   if (typeof host !== 'string') {
-    throw new Error('[ethjs-provider-http] the HttpProvider instance requires that the host be specified (e.g. `new HttpProvider("http://localhost:8545")` or via service like infura `new HttpProvider("http://ropsten.infura.io")`)');
+    throw new Error('[ethjs-provider-http] the HttpProvider instance requires that the host be specified (e.g. `new HttpProvider("http://localhost:8545")` or via service like infura `new HttpProvider("http://goerli.infura.io")`)');
   }
 
   var self = this;
